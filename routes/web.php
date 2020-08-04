@@ -11,15 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 
 //PAGINA INICIAL
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('paginas/index');
-});
+})->name('index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
