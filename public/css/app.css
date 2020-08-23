@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+@font-face{
+    font-family: FredokaOne;
+    src: url('font/FredokaOne-Regular.ttf');
+}
+.letraPet{
+    font-family: FredokaOne;
+}
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

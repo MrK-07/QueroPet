@@ -23,10 +23,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!-- FontAwesome -->
+    <link href="/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #FFD700">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #FFD700">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/img/logo.png" style="width: 50px; margin-right: 5%;"><strong style="font-size: 30px; color: black">{{ config('app.name', 'Laravel') }}</strong>
@@ -46,11 +48,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-user"></i> {{ __('Entrar') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-clipboard"></i> {{ __('Registrar-se') }}</a>
                                 </li>
                             @endif
                         @else
